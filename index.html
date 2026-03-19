@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prisma Clínica Veterinaria</title>
+    <link rel="icon" href="Logo.ico" sizes="32x32">
+    <link rel="icon" href="Logo.ico" sizes="192x192">
+    <link rel="apple-touch-icon" href="Logo.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo-container">
+      <img src="LOGO.png" alt="Prisma Veterinaria">
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#ubicacion">Ubicación</a>
+
+      <!-- BOTÓN SOLO MÓVIL -->
+      <button class="btn-menu" onclick="openWhatsApp()">
+        Agendar cita
+      </button>
+    </nav>
+    
+    <!-- HAMBURGUESA -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</header>
+<!-- HERO -->
+ <section id="inicio" class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <span class="hero-badge">🐾 Atención veterinaria profesional</span>
+
+    <h1>
+      Cuidamos la vida de tu mascota con 
+      <span>tecnología y experiencia</span>
+    </h1>
+
+    <p>
+      Clínica veterinaria especializada en diagnósticos, cirugías y atención de urgencias 24/7 en Valledupar.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="btn-primary" 
+        onclick="openWhatsApp('Hola, quiero agendar una valoración para mi mascota')">
+        Agendar valoración
+      </button>
+
+      <button class="btn-emergency"
+        onclick="openWhatsApp('Urgencia veterinaria, necesito atención inmediata')">
+        🚨 Urgencias 24/7   
+      </button>
+    </div>
+
+    <!-- CONFIANZA -->
+    <div class="hero-stats">
+      <div>
+        <strong>+500</strong>
+        <span>Mascotas atendidas</span>
+      </div>
+      <div>
+        <strong>+5 años</strong>
+        <span>de experiencia</span>
+      </div>
+      <div>
+        <strong>24/7</strong>
+        <span>Urgencias</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section id="experiencia" class="section experience">
+
+  <div class="experience-header">
+    <h2>Cuidado profesional para tu mascota</h2>
+    <p>
+      Contamos con personal capacitado, equipos modernos y protocolos clínicos para garantizar la seguridad y bienestar de cada paciente.
+    </p>
+  </div>
+
+  <div class="experience-grid">
+
+    <div class="experience-card">
+      <div class="icon">👩‍⚕️</div>
+      <h3>Personal Capacitado</h3>
+      <p>Médicos veterinarios con experiencia en atención clínica y quirúrgica.</p>
+    </div>
+
+    <div class="experience-card">
+      <div class="icon">🏥</div>
+      <h3>Área Quirúrgica</h3>
+      <p>Equipos modernos para procedimientos seguros y controlados.</p>
+    </div>
+
+    <div class="experience-card">
+      <div class="icon">🧪</div>
+      <h3>Diagnóstico Preciso</h3>
+      <p>Herramientas avanzadas para identificar problemas rápidamente.</p>
+    </div>
+
+    <div class="experience-card">
+      <div class="icon">🛡️</div>
+      <h3>Protocolos Seguros</h3>
+      <p>Seguimos estándares clínicos para proteger la salud de tu mascota.</p>
+    </div>
+
+  </div>
+
+</section>
+<!-- SERVICIOS -->
+<section id="servicios" class="section services">
+
+  <div class="services-header">
+    <h2>Nuestros Servicios</h2>
+    <p>
+      Ofrecemos atención integral para el cuidado, diagnóstico y tratamiento de tu mascota.
+    </p>
+  </div>
+
+  <div class="services-grid">
+
+    <!-- CARD 1 -->
+    <div class="service-card">
+        <div class="service-icon">
+            <i data-lucide="stethoscope"></i>
+        </div>
+      <h3>Cuidado Clínico</h3>
+
+      <ul>
+        <li>Consultas generales</li>
+        <li>Vacunación</li>
+        <li>Ecografías</li>
+        <li>Spa y bienestar</li>
+      </ul>
+
+      <button onclick="openWhatsApp('Quiero información sobre consultas veterinarias')">
+        Consultar
+      </button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="service-card highlight">
+      <div class="service-icon">
+        <i data-lucide="hospital"></i>
+      </div>
+      <h3>Cirugías Veterinarias</h3>
+
+      <ul>
+        <li>Cirugías menores</li>
+        <li>Procedimientos especializados</li>
+        <li>Postoperatorio</li>
+      </ul>
+
+      <button onclick="openWhatsApp('Necesito información sobre cirugías veterinarias')">
+        Consultar
+      </button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="service-card">
+        <div class="service-icon">
+            <i data-lucide="siren"></i>
+        </div>
+      <h3>Urgencias 24/7</h3>
+
+      <ul>
+        <li>Atención inmediata</li>
+        <li>Casos críticos</li>
+        <li>Disponibilidad permanente</li>
+      </ul>
+
+      <button onclick="openWhatsApp('Urgencia veterinaria, necesito ayuda inmediata')">
+        Contactar ahora
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALERIA -->
+<!-- GALERIA -->
+<section id="galeria" class="section gallery-section">
+
+  <div class="gallery-header">
+    <span class="tag">Casos reales</span>
+    <h2>Recuperación de nuestros pacientes</h2>
+    <p>
+      Historias reales de mascotas que recibieron atención profesional y hoy disfrutan de una mejor calidad de vida.
+    </p>
+  </div>
+
+  <div class="gallery-grid">
+
+    <!-- DESTACADO -->
+    <div class="gallery-item">
+      <img src="Princesa Paciente 1.png" alt="Princesa">
+      <div class="overlay">
+        <h4>Princesa</h4>
+        <span>Alta médica</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="Luna Paciente 2.png" alt="Luna">
+      <div class="overlay">
+        <h4>Luna</h4>
+        <span>Parto Exitoso</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="Michu Jose paciente 3.png" alt="Michu Jose">
+      <div class="overlay">
+        <h4>Michu Jose</h4>
+        <span>Tratamiento exitoso</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="Tammy Paciente 6.png" alt="Tammy">
+      <div class="overlay">
+        <h4>Tammy</h4>
+        <span>Control Veterinario</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="Snowy Paciente 4.png" alt="Snowy">
+      <div class="overlay">
+        <h4>Snowy</h4>
+        <span>Control veterinario</span>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="Suky Paciente 5.png" alt="Suky">
+      <div class="overlay">
+        <h4>Suky</h4>
+        <span>Tratamiento Completo</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section testimonials">
+
+  <div class="testimonials-header">
+    <span class="tag">Opiniones reales</span>
+    <h2>Lo que dicen nuestros clientes</h2>
+    <p>
+      Experiencias de personas que confiaron en nosotros para el cuidado de sus mascotas.
+    </p>
+  </div>
+
+  <div class="testimonials-grid">
+
+    <!-- TESTIMONIO 1 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+
+      <p>
+        Cirugía exitosa y recuperación rápida. La atención fue excelente y me explicaron todo el proceso.
+      </p>
+
+      <div class="client">
+        <div class="avatar">A</div>
+        <div>
+          <strong>Ana Martínez</strong>
+          <span>Cliente</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIO 2 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+
+      <p>
+        Atención de urgencia rápida y profesional. Se nota la experiencia del equipo. Totalmente recomendados.
+      </p>
+
+      <div class="client">
+        <div class="avatar">C</div>
+        <div>
+          <strong>Carlos Gómez</strong>
+          <span>Cliente</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIO 3 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+
+      <p>
+        Excelente seguimiento y compromiso con el bienestar de las mascotas. Muy buena experiencia.
+      </p>
+
+      <div class="client">
+        <div class="avatar">L</div>
+        <div>
+          <strong>Laura Pérez</strong>
+          <span>Cliente</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- URGENCIAS -->
+<section class="emergency">
+
+  <div class="emergency-content">
+    <span class="tag">Atención inmediata</span>
+    <h2>Urgencias Veterinarias 24/7</h2>
+    <p>
+      Estamos disponibles en todo momento para atender emergencias y brindar asistencia rápida a tu mascota.
+    </p>
+  </div>
+
+  <div class="emergency-actions">
+    <button onclick="openWhatsApp('Urgencia veterinaria, necesito ayuda inmediata')">
+      Contactar por WhatsApp
+    </button>
+  </div>
+
+</section>
+
+
+<!-- MAPA -->
+<section id="ubicacion" class="section location">
+
+  <div class="location-header">
+    <h2>Visítanos</h2>
+    <p>Estamos ubicados en una zona accesible para brindarte atención rápida y oportuna.</p>
+  </div>
+
+  <div class="location-container">
+
+    <!-- INFO -->
+    <div class="location-info">
+
+      <h3>Prisma Clínica Veterinaria</h3>
+
+      <p class="address">
+        📍 Carrera 19B1 # 9C - 60<br>
+        Barrio Los Cortijos, Valledupar
+      </p>
+
+      <p class="hours">
+        🕒 Atención 24/7 para urgencias
+      </p>
+
+      <div class="location-buttons">
+        <button onclick="openWhatsApp('Hola, quiero información sobre la ubicación')">
+          Contactar por WhatsApp
+        </button>
+
+        <a href="https://www.google.com/maps?q=Carrera+19B1+9C-60+Los+Cortijos+Valledupar" target="_blank">
+          Cómo llegar
+        </a>
+      </div>
+
+    </div>
+
+    <!-- MAPA -->
+    <div class="location-map">
+      <iframe 
+        src="https://www.google.com/maps?q=Carrera+19B1+9C-60+Los+Cortijos+Valledupar&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+
+</section>
+
+ <!--Footer-->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- MARCA -->
+    <div class="footer-brand">
+      <h3>Prisma Clínica Veterinaria</h3>
+      <p>
+        Atención profesional y dedicada para el bienestar de tu mascota.
+      </p>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="footer-links">
+      <h4>Contacto</h4>
+      <p>📍 Valledupar, Colombia</p>
+      <p>📞 +57 311 6593440</p>
+      <p>🕒 Atención 24/7</p>
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <div class="footer-links">
+      <h4>Navegación</h4>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#ubicacion">Ubicación</a>
+    </div>
+
+    <!-- REDES -->
+    <div class="footer-links">
+      <h4>Redes</h4>
+      <a href="https://www.instagram.com/prismaclivet/">Instagram</a>
+      <a href="https://wa.me/573116593440">WhatsApp</a>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Prisma Clínica Veterinaria - Todos los derechos reservados</p>
+  </div>
+
+</footer>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/573116593440" class="whatsapp">💬</a>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
